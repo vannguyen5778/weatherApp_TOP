@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon"  href="images/tab-icon-sun.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body class="blurred">
+    <div class="left">
+        <input type="text" placeholder="Search for cities" class="ctn search-bar">
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <header class="header">
+            <h2 class="city" data-city>Madrid</h2>
+            <h1><span class="current-temp" data-current-temp>31</span>&deg;</h1>
+            <img src="images/clear.png" alt="sun" class="current-weather-icon big">
+        </header>
+
+        <div class="today-forecast ctn">
+            <p class="section-header-text">Today's forecast</p>
+            <section class="hour-section" data-hour-section>
+                <div class="hour-card">
+                    <div class="hour-card-hour">6:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+                <div class="hour-card">
+                    <div class="hour-card-hour">7:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+                <div class="hour-card">
+                    <div class="hour-card-hour">8:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+                <div class="hour-card">
+                    <div class="hour-card-hour">9:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+                <div class="hour-card">
+                    <div class="hour-card-hour">10:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+                <div class="hour-card">
+                    <div class="hour-card-hour">11:00 AM</div>
+                    <img src="images/clouds.png" class="weather-icon">
+                    <div>25&deg;</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="air-conditions ctn">
+            <p class="section-header-text">Air conditions</p>
+            <section class="details">
+                <div class="info-group">
+                    <img src="images/thermometer.png"><span class="label">Real Feel</span>
+                    <div><span data-current-rf>30</span>&deg;</div>
+                </div>
+                <div class="info-group">
+                    <span class="label"><img src="images/wind.png">Wind</span>
+                    <div><span data-current-wind>0.2</span> km/h</div>
+                </div>
+                <div class="info-group">
+                    <span class="label"><img src="images/humidity.png">Humidity</span>
+                    <div><span data-current-humidity>0</span>%</div>
+                </div>
+                <div class="info-group">
+                    
+                    <span class="label"><img src="images/air.png">Air Quality</span>
+                    <div><span data-current-air-quality>Good</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="right">
+        <div class="ctn">
+            <p class="section-header-text">7-day forecast </p>
+            <table class="day-section" rules="rows" data-day-section>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Today</div>
+                    </td>
+                    <td>
+                        <img src="images/clear.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Sunny</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>36</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Tue</div>
+                    </td>
+                    <td>
+                        <img src="images/clear.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Sunny</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>37</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Wed</div>
+                    </td>
+                    <td>
+                        <img src="images/clear.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Sunny</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>37</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Thu</div>
+                    </td>
+                    <td>
+                        <img src="images/clouds.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Cloudy</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>32</span>/
+                            <span>20</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Fri</div>
+                    </td>
+                    <td>
+                        <img src="images/clouds.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Cloudy</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>33</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Sat</div>
+                    </td>
+                    <td>
+                        <img src="images/rain.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Rainy</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>36</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="day-row">
+                    <td>
+                        <div class="label">Sun</div>
+                    </td>
+                    <td>
+                        <img src="images/clear.png" class="weather-icon" alt="">
+                    </td>
+                    <td>
+                        <div class="label">Sunny</div>
+                    </td>
+                    <td>
+                        <div class="label">
+                            <span>37</span>/
+                            <span>21</span>
+                        </div>
+                    </td>
+                </tr>
+            
+            </table>
+        </div>
+        
+    </div>
+    <template id="hour-card-template">
+        <div class="hour-card" >
+            <div class="hour-card-hour" data-hour></div>
+            <img class="weather-icon" data-icon>
+            <div><span data-temp></span>&deg;</div>
+        </div>
+    </template>
+
+    <template id="day-card-template">
+        <tr class="day-row">
+            <td>
+                <div class="label" data-date></div>
+            </td>
+            <td>
+                <img data-icon class="weather-icon" alt="">
+            </td>
+            <td>
+                <div class="label bold"  data-desc></div>
+            </td>
+            <td>
+                <div class="label">
+                    <span class="bold" data-high-temp></span>/
+                    <span data-low-temp></span>
+                </div>
+            </td>
+        </tr>
+    </template>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/search.png" alt=""></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22&deg;C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">15km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html> -->

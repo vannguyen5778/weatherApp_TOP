@@ -1,0 +1,168 @@
+
+:root {
+    --dark-bg: rgb(15 19 30);
+    --light-dark: rgb(33 43 59);
+    --gray-text: #939393;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--dark-bg);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+html {
+    color: #fff;
+    font-size: 16px;
+}
+
+.light-bg {
+    background-color: var(--light-dark);
+}
+
+.rounded {
+    border-radius: .5rem;
+}
+
+.left {
+    margin: .5rem 2rem;
+
+}
+
+.search-bar {
+    width: 100%;
+    height: 2rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .5rem;
+}
+
+.header {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "upper side" "lower side";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city {
+    grid-area: upper;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.current-temp {
+    grid-area: lower;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.ctn {
+    border-radius: .5rem;
+    padding: 1rem;  
+    background-color: var(--light-dark); 
+
+}
+
+.current-weather-icon {
+    grid-area: side;
+    width: 150px;
+    height: 150px;
+}
+
+.hour-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 90px);
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.hour-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 55px;
+}
+
+.hour-card + .hour-card {
+    border-left: 1px solid #575555;  
+}
+
+
+.section-header-text, .hour-card-hour {
+    color: var(--gray-text);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+.air-conditions {
+    margin-top: .75rem;
+}
+
+.details {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+}
+
+.label {
+    font-size: .75rem;
+    color: var(--gray-text);
+}
+
+.right {
+    margin: 3.5rem 3rem 0;
+}
+
+.day-section {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+}
+
+.day-row {
+    line-height: 2rem;
+}
+
+.error {
+    text-align: left;
+    margin-left: .3rem;
+    font-size: .75rem;
+    margin-top: .5rem;
+    color: red;
+    display: none;
+}
+
+.bold {
+    font-weight: 600;
+    color: rgb(238, 233, 233);
+}
+
+.info-group img {
+    width: 1rem;
+    padding-right: 4px;
+}
+
+.info-group span[class="label"] {
+    vertical-align: middle;
+}
+
+.blurred {
+    filter: blur(8px);
+}
